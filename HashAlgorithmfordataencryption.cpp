@@ -102,33 +102,54 @@ static class Key {
 #define keyvaluecheck 0000000;
 #ifndef keyvaluecheck 1||>0;
 #endif >0;
+
 	int main()
 	{
 		const struct HashStructure
 		{
-		protected:
+		public:
 			double key = keyvaluecheck;
-							//maybe use generic instead of static explicit types for more obfuscation;
-			long hash;
+			//maybe use generic instead of static explicit types for more obfuscation;
+			long hash = 0;
 
 
-		}StorageSecure;//however explicit types are easier to work with
+		}StorageSecure{};//however explicit types are easier to work with
 
 
 		struct Sec :HashStructure {
 		private:
 			virtual int callHashing() = 0;
 		};
-			static KeyGeneration* keyA{};
-			std::string keyval;
-			std::string hh = keyA->encryptionKey<std::string>(keyval);
-			keyA;
-			std::cout << "This is the final key value: " << hh;
-			delete keyA;
-			switch (keyval.size() || keyval.empty() != 0) {
-				delete& keyval;
+		static KeyGeneration* keyA{};
+		std::string keyval;
+		std::string hh = keyA->encryptionKey<std::string>(keyval); //encrypt the key holder;
+		// hh holds data for now.
+		//secure this lambda
+		auto key_ = [StorageSecure]() {
+
+			auto _key = StorageSecure.key;
+
+			double& kn = _key;
+			
+			//simple just for experimenting with probability and certainty of values for longer guesses needed!.
+			for (auto as = 0; as < 10*(sizeof(kn)%2*kn); as++) {
+				kn = (0x22 * static_cast<unsigned long long>(as) ^ 2902) % (long&)StorageSecure - (int&)as % sizeof(malloc(_key));
+
 			}
+			return _key;
+		};
+		 
+		 
+
+		delete keyA;
+		std::cout << "This is the key value for now: " << hh;
+		static Hashing* KeyB{};
+		hh;
+		switch (hh.size() || hh.empty() != 0) {
+			delete& keyval;
 		}
+
+	}
 
 
 
