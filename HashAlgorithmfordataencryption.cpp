@@ -5,6 +5,7 @@
 #include <algorithm>;
 #include <math.h>;
 #include <ymath.h>;
+#include <unordered_set>;
 //internet encryption key for sha256
 
 
@@ -14,7 +15,7 @@ static class Key {
 	class KeyGeneration:Key {
 	private:
 		template <typename F>
-		static const F key; //param will be slightly insecure actually alot change this asap lol-me again ernest the idiot!
+		static const F key; //param keynow1 will be slightly insecure actually alot change this asap lol-me again ernest the idiot!
 	public:template <typename A1>
 		
 		std::string encryptionKey( A1 keynow1) {
@@ -125,42 +126,72 @@ static class Key {
 		std::string hh = keyA->encryptionKey<std::string>(keyval); //encrypt the key holder;
 		// hh holds data for now.
 		//secure this lambda
+
+		keyval.assign(hh) = keyval;
+		if (keyval != "") {
+			delete& hh;
+		}
 		auto key_ = [StorageSecure]() {
-			
-			
-
-
-
-
 			auto _key = StorageSecure.key;
 
 			double& kn = _key;
-			
+
 			//simple just for experimenting with probability and certainty of values for longer guesses needed!.
 			//this is the non hash function stuff for simple maths to build up from.
 
-			for (auto as = 0; as < 10*(sizeof(kn)%2*kn); as++) {
+			for (auto as = 0; as < 10 * (sizeof(kn) % 2 * kn); as++) {
 				kn = (0x22 * static_cast<unsigned long long>(as) ^ 2902) % (long&)StorageSecure - (int&)as % sizeof(malloc(_key));
 				//now pass kn into a algorithm may be slow asf but who caress. thats refactoring shit.
 				auto scramble = [kn]() {
 					long double scramblekn = kn;
 					switch (scramblekn != 0) {
-						case sizeof(kn)<sizeof(scramblekn):
+						case sizeof(kn) < sizeof(scramblekn) :
+							struct memory {
+							virtual long double memoryallocation() = 0;
+							virtual::double_t Swish() = 0;
+						};
 
-					
+						struct locmem :memory {
+						private:
+							long double memoryallocation() {
+								long double Now;
+								if (!0) {
+
+								}
+								if (NULL || !nullptr) {//never be nullptr but it will be in future and evaluated before the creation of Now and used logixally some how.
+									Now = 0;
+								}			//experiemental lambdas will all be changed just early build!..
+								else {// need to refactor for zero  semantic errors!!!
+									//compiles fine for now until deeper use/implementation of function and setting.
+									auto mix = [Now](auto q8202) {
+										uint64_t keynumber = q8202; //binary bit 64
+										q8202* keynumber = q8202;
+										keynumber% q8202 = keynumber;
+										auto temp = keynumber;
+										delete keynumber;
+										double long keynumber = temp ^= ((uint64_t)temp ^= temp % ((int&)temp &= temp)) ^ ((long&)temp %= ++sizeof(temp));
+										keynumber = q8202 * keynumber;
+										for (int a = 0; a < keynumber; a++) {
+											keynumber = keynumber ^ 1.3782929;
+											a >= 20 / sizeof(a * keynumber) ? a + keynumber = Now : a++;
+											if (Now != 0 && Now > 120000) {
+												return Now;
+											};
+										}
+									};
+								}
+							}
+						};
+
 					}
 				};
-	
+
 			}
 			return _key;
 		};
-		 
-		 
-
 		delete keyA;
-		std::cout << "This is the key value for now: " << hh;
+		std::cout << "This is the key value for now: " << keyval;
 		static Hashing* KeyB{};
-		hh;
 		switch (hh.size() || hh.empty() != 0) {
 			delete& keyval;
 		}
