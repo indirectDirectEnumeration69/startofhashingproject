@@ -126,15 +126,31 @@ static class Key {
 		// hh holds data for now.
 		//secure this lambda
 		auto key_ = [StorageSecure]() {
+			
+			
+
+
+
 
 			auto _key = StorageSecure.key;
 
 			double& kn = _key;
 			
 			//simple just for experimenting with probability and certainty of values for longer guesses needed!.
+			//this is the non hash function stuff for simple maths to build up from.
+
 			for (auto as = 0; as < 10*(sizeof(kn)%2*kn); as++) {
 				kn = (0x22 * static_cast<unsigned long long>(as) ^ 2902) % (long&)StorageSecure - (int&)as % sizeof(malloc(_key));
+				//now pass kn into a algorithm may be slow asf but who caress. thats refactoring shit.
+				auto scramble = [kn]() {
+					long double scramblekn = kn;
+					switch (scramblekn != 0) {
+						case sizeof(kn)<sizeof(scramblekn):
 
+					
+					}
+				};
+	
 			}
 			return _key;
 		};
