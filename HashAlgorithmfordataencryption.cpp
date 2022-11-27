@@ -6,6 +6,7 @@
 #include <math.h>;
 #include <ymath.h>;
 #include <unordered_set>;
+
 //internet encryption key for sha256
 
 
@@ -128,19 +129,17 @@ static class Key {
 		// hh holds data for now.
 		//secure this lambda
 
-		auto hash = [](std::string const& s) {
-			std::hash<std::string> hash;
-			return hash(s);
+		auto hash1 = [](std::string const& s) {
+			std::hash<std::string> hash1 = std::hash<std::string>();
+			return hash1(s);
 		};
-		std::cout << "Hashed key as hh: " << hash;
+		keyval = hash1(hh);
+		std::cout << "Hashed key as hh: " << hash1(hh) << std::endl;
+		std::cout << "key val is : " << keyval;
 		std::cout << "'\nkey will now enter more levels of encyrption'\n";
 		//key val now needs to be copied into keyval
-		keyval = hash(hh);
-		if (keyval != "") {
-			// hh;
-		}
-		else { 
-			auto key_ = [StorageSecure]() { //alll will be refactored into headers and cpp files temp lambdas for now but will be used when needed
+		
+		auto key_ = [StorageSecure]() { //alll will be refactored into headers and cpp files temp lambdas for now but will be used when needed
 				auto _key = StorageSecure.key;
 
 				double& kn = _key;
@@ -168,12 +167,13 @@ static class Key {
 									if (!0) {
 
 									}
-									if (NULL || !nullptr) {//never be nullptr but it will be in future and evaluated before the creation of Now and used logixally some how.
+									if (NULL || !nullptr||Now != 0) {//never be nullptr but it will be in future and evaluated before the creation of Now and used logixally some how.
 										Now = 0;
 									}			//experiemental lambdas will all be changed just early build!..
-									else {// need to refactor for zero  semantic errors!!!
+									else if(Now == 0) {// need to refactor for zero  semantic errors!!!
 										//compiles fine for now until deeper use/implementation of function and setting.
 										auto mix = [Now](auto q8202) {
+											const long double O = 0.000000000;
 											uint64_t keynumber = q8202; //binary bit 64
 											q8202* keynumber = q8202;
 											keynumber% q8202 = keynumber;
@@ -182,12 +182,36 @@ static class Key {
 											double long keynumber = temp ^= ((uint64_t)temp ^= temp % ((int&)temp &= temp)) ^ ((long&)temp %= ++sizeof(temp));
 											keynumber = q8202 * keynumber;
 											for (int a = 0; a < keynumber; a++) {
+												
 												keynumber = keynumber ^ 1.3782929;
 												a >= 20 / sizeof(a * keynumber) ? a + keynumber = Now : a++;
 												if (Now != 0 && Now > 120000) {
-													return Now;
+													do {
+														Now >> O;
+														Now = Now * 2;
+														Now = Now % 2 * hash(Now);
+														Now *= Now ^ 2.921;
+														fmod(Now, hash(Now * sin(Now)));
+														while (cbrt(Now) > 0) {
+
+
+
+
+														}
+
+														q8202 = hash(Now) * hash(sinhl(Now^76*keynumber=q8202));
+														Now <reinterpret_cast<long double>(Now) >> O;
+														O*(Now) ^ q8202 >> O;
+														delete q8202;
+														delete Now;
+													} while (Now != 0);
+													
+
 												};
+												
 											}
+											
+											return O;
 										};
 									}
 								}
@@ -197,9 +221,9 @@ static class Key {
 					};
 
 				}
+				
 				return _key;
-			};
-		};
+			};//end of lambda
 		delete keyA;
 		std::cout << "This is the key value for now: " << keyval;
 		static Hashing* KeyB{};
