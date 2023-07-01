@@ -3,4 +3,4 @@ just learning some hash concepts and logic to hopefully one day turn this into a
 
 
 
-Project wont be finished until the summer most likely.
+Project wont be finished until unknown date , will probably integrate this idea into another project i find success in exploring.
